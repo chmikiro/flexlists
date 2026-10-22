@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-"""Convert "ip timezone" lines to FoxyProxy Extended import lines.
-Country/ISO code come from the system tz database (zone.tab + iso3166.tab). Optional --map CSV overrides/extends it.
-"""
 import argparse, re, sys
 from pathlib import Path
 from urllib.parse import quote
