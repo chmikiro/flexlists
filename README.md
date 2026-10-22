@@ -1,5 +1,9 @@
 # mullvadoxy
-Generate foxyproxy list based on Maximko updated local socks5 addresses for [Mullvad](https://mullvad.net/en/help/socks5-proxy) proxying layer: [**`proxies.txt`**](https://github.com/maximko/mullvad-socks-list/blob/list/socks-timezone-list.txt)
+Generate Foxyproxy list based on Maximko updated local socks5 addresses for [Mullvad](https://mullvad.net/en/help/socks5-proxy) proxying layer: [**`proxies.txt`**](https://github.com/maximko/mullvad-socks-list/blob/list/socks-timezone-list.txt)
+
+The script is simply converts "ip timezone" dataset to Foxyproxy [extended import lines](https://github.com/foxyproxy/firefox-extension/wiki/Import-Proxy-List): `protocol://username:password@server:port?parameter1=value1&parameter2=value2`
+
+Country/ISO code come from the system tz database (zone.tab + iso3166.tab). Optional --map CSV overrides/extends it.
 
 > This script can virtually be adapted to any output format quite efficiently, feel free to contribute.
 
