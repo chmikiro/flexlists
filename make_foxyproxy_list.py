@@ -32,12 +32,17 @@ def load_tz(tzdir):
 
 def load_overrides(path):
     # CSV: timezone,cc,country   e.g. Europe/Kyiv,UA,Ukraine
+    # Header/comment lines carry no "/" in the timezone field and are skipped.
     out = {}
     if path:
         for line in Path(path).read_text(encoding="utf-8").splitlines():
-            if line.strip() and not line.startswith("#"):
-                tz, cc, country = [x.strip() for x in line.split(",", 2)]
-                out[tz] = (cc, country)
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            tz, cc, country = [x.strip() for x in line.split(",", 2)]
+            if "/" not in tz:
+                continue
+            out[tz] = (cc, country)
     return out
 
 def main():
