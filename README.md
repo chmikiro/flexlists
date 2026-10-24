@@ -1,7 +1,7 @@
-# mullvadoxy
-Generate Foxyproxy list based on Maximko updated local socks5 addresses for [Mullvad](https://mullvad.net/en/help/socks5-proxy) proxying layer: [**`proxies.txt`**](https://github.com/maximko/mullvad-socks-list/blob/list/socks-timezone-list.txt)
+# flexlists, what is?
+Generate proxies list (only foxyproxy currently) based on daily updated local socks5 addresses for [Mullvad](https://mullvad.net/en/help/socks5-proxy) proxying layer: [**`proxies.txt`**](https://github.com/maximko/mullvad-socks-list/blob/list/socks-timezone-list.txt)
 
-The script is simply converts "ip timezone" dataset to Foxyproxy [extended import lines](https://github.com/foxyproxy/firefox-extension/wiki/Import-Proxy-List): `protocol://username:password@server:port?parameter1=value1&parameter2=value2`
+The script simply converts "ip timezone" dataset to Foxyproxy [extended import lines](https://github.com/foxyproxy/firefox-extension/wiki/Import-Proxy-List): `protocol://username:password@server:port?parameter1=value1&parameter2=value2`
 
 Country/ISO code come from the system tz database (zone.tab + iso3166.tab). Optional --map CSV overrides/extends it.
 
@@ -19,3 +19,7 @@ Country/ISO code come from the system tz database (zone.tab + iso3166.tab). Opti
 
 ### Other port or scheme
 `python3 make_foxyproxy_list.py proxies.txt out.txt --port 1081 --scheme socks5`
+
+
+# Aknowledgements
+- [**Maximko**](https://github.com/maximko)
