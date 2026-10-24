@@ -21,5 +21,5 @@ Country/ISO code come from the system tz database (zone.tab + iso3166.tab). Opti
 `python3 make_foxyproxy_list.py proxies.txt out.txt --port 1081 --scheme socks5`
 
 
-# Aknowledgements
+# Acknowledgement
 - [**Maximko**](https://github.com/maximko)
